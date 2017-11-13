@@ -14,6 +14,7 @@
 		C9618BA21FB7D0B40054BE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9618BA01FB7D0B40054BE68 /* LaunchScreen.storyboard */; };
 		C9618BAD1FB7D0B50054BE68 /* Star_Wars_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BAC1FB7D0B50054BE68 /* Star_Wars_AppTests.swift */; };
 		C9618BB81FB7D0B50054BE68 /* Star_Wars_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BB71FB7D0B50054BE68 /* Star_Wars_AppUITests.swift */; };
+		C9618BC61FB92B4C0054BE68 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BC51FB92B4C0054BE68 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C9618BB31FB7D0B50054BE68 /* Star Wars AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star Wars AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9618BB71FB7D0B50054BE68 /* Star_Wars_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Wars_AppUITests.swift; sourceTree = "<group>"; };
 		C9618BB91FB7D0B50054BE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9618BC51FB92B4C0054BE68 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				C9618B971FB7D0B40054BE68 /* AppDelegate.swift */,
 				C9618B991FB7D0B40054BE68 /* ViewController.swift */,
+				C9618BC51FB92B4C0054BE68 /* MovieCell.swift */,
 				C9618B9B1FB7D0B40054BE68 /* Main.storyboard */,
 				C9618B9E1FB7D0B40054BE68 /* Assets.xcassets */,
 				C9618BA01FB7D0B40054BE68 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				C9618B9A1FB7D0B40054BE68 /* ViewController.swift in Sources */,
 				C9618B981FB7D0B40054BE68 /* AppDelegate.swift in Sources */,
+				C9618BC61FB92B4C0054BE68 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
