@@ -1,4 +1,4 @@
-# Star Wars Movies and Charaters App
+# Star Wars Movies and Characters App
 
-practicing networking with swift using swapi
+Practicing networking with swift using swapi
 
