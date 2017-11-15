@@ -31,8 +31,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "movieSelectedSegue" {
             let nextViewController = (segue.destination as! MovieViewController)
-            print(movies[currentIndex].name)
-            nextViewController.text  = movies[currentIndex].name!
+            nextViewController.movieTitle  = movies[currentIndex].name!
+            nextViewController.director = movies[currentIndex].director!
+            nextViewController.date = movies[currentIndex].releaseDate!
         }
     }
 }
@@ -42,6 +43,8 @@ extension ViewController {
     struct Movie {
         let name: String?
         let characters: [String]
+        let director: String?
+        let releaseDate: String?
     }
 }
 
@@ -61,7 +64,7 @@ extension ViewController {
                 
                 for movie in json["results"] {
                     //print(movie.1["characters"])
-                    self.movies.append(Movie(name: movie.1["title"].string, characters: movie.1["characters"].arrayValue.map { $0.stringValue}))
+                    self.movies.append(Movie(name: movie.1["title"].string, characters: movie.1["characters"].arrayValue.map { $0.stringValue}, director: movie.1["director"].string, releaseDate: movie.1["release_date"].string))
                 }
                 
                 

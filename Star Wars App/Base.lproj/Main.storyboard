@@ -92,19 +92,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-Cv-gl3">
-                                <rect key="frame" x="-11" y="284" width="397" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-Cv-gl3">
+                                <rect key="frame" x="12" y="84" width="351" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ioa-bv-BZz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzV-Vp-AST">
+                                <rect key="frame" x="12" y="149" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-xG-eYV">
+                                <rect key="frame" x="12" y="180" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qsJ-xG-eYV" firstAttribute="top" secondItem="BzV-Vp-AST" secondAttribute="bottom" constant="10" id="4cX-KC-8Qm"/>
+                            <constraint firstItem="qsJ-xG-eYV" firstAttribute="leading" secondItem="Ado-s7-A2s" secondAttribute="leading" constant="12" id="8XB-m4-Csq"/>
+                            <constraint firstItem="BzV-Vp-AST" firstAttribute="top" secondItem="eHo-Cv-gl3" secondAttribute="bottom" constant="10" id="Bpe-sF-ADe"/>
+                            <constraint firstItem="BzV-Vp-AST" firstAttribute="leading" secondItem="Ado-s7-A2s" secondAttribute="leading" constant="12" id="GTw-zJ-XgJ"/>
+                            <constraint firstItem="eHo-Cv-gl3" firstAttribute="leading" secondItem="g6X-nA-tiZ" secondAttribute="leading" constant="12" id="K7c-Dq-54q"/>
+                            <constraint firstAttribute="trailing" secondItem="eHo-Cv-gl3" secondAttribute="trailing" constant="12" id="LQA-FN-z4D"/>
+                            <constraint firstItem="Ado-s7-A2s" firstAttribute="trailing" secondItem="qsJ-xG-eYV" secondAttribute="trailing" constant="12" id="LrQ-bI-MN2"/>
+                            <constraint firstItem="eHo-Cv-gl3" firstAttribute="top" secondItem="Ado-s7-A2s" secondAttribute="top" constant="20" id="t24-VR-yfg"/>
+                            <constraint firstItem="Ado-s7-A2s" firstAttribute="trailing" secondItem="BzV-Vp-AST" secondAttribute="trailing" constant="12" id="z35-7q-12w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ado-s7-A2s"/>
                     </view>
                     <connections>
+                        <outlet property="directorLabel" destination="BzV-Vp-AST" id="BB6-QH-6Am"/>
                         <outlet property="movieTitleLabel" destination="eHo-Cv-gl3" id="hs8-kM-Nq9"/>
+                        <outlet property="releaseDateLabel" destination="qsJ-xG-eYV" id="QmD-on-d4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9P2-QL-tbi" userLabel="First Responder" sceneMemberID="firstResponder"/>

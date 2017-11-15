@@ -10,12 +10,19 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
-    var text: String = ""
+    var movieTitle: String = ""
+    var director: String = ""
+    var date: String = ""
     @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var directorLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        movieTitleLabel.text = text
+        movieTitleLabel.text = movieTitle
+        directorLabel.text = director
+        releaseDateLabel.text = date
         
     }
 
