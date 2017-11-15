@@ -19,6 +19,7 @@
 		C9618BB81FB7D0B50054BE68 /* Star_Wars_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BB71FB7D0B50054BE68 /* Star_Wars_AppUITests.swift */; };
 		C9618BC61FB92B4C0054BE68 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BC51FB92B4C0054BE68 /* MovieCell.swift */; };
 		C9618BD31FBC05B70054BE68 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BD21FBC05B70054BE68 /* MovieViewController.swift */; };
+		C9618BD51FBCF5690054BE68 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9618BD41FBCF5690054BE68 /* CharacterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C9618BB91FB7D0B50054BE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9618BC51FB92B4C0054BE68 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C9618BD21FBC05B70054BE68 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		C9618BD41FBCF5690054BE68 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		D61BFFE8066956ED0FDE5F4E /* Pods-Star Wars AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Star Wars AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Star Wars AppUITests/Pods-Star Wars AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				C9618BD21FBC05B70054BE68 /* MovieViewController.swift */,
 				C9618B991FB7D0B40054BE68 /* ViewController.swift */,
 				C9618BC51FB92B4C0054BE68 /* MovieCell.swift */,
+				C9618BD41FBCF5690054BE68 /* CharacterCell.swift */,
 				C9618B9B1FB7D0B40054BE68 /* Main.storyboard */,
 				C9618B9E1FB7D0B40054BE68 /* Assets.xcassets */,
 				C9618BA01FB7D0B40054BE68 /* LaunchScreen.storyboard */,
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9618BD51FBCF5690054BE68 /* CharacterCell.swift in Sources */,
 				C9618B9A1FB7D0B40054BE68 /* ViewController.swift in Sources */,
 				C9618B981FB7D0B40054BE68 /* AppDelegate.swift in Sources */,
 				C9618BC61FB92B4C0054BE68 /* MovieCell.swift in Sources */,

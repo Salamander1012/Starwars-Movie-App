@@ -32,8 +32,9 @@ class ViewController: UIViewController {
         if segue.identifier == "movieSelectedSegue" {
             let nextViewController = (segue.destination as! MovieViewController)
             nextViewController.movieTitle  = movies[currentIndex].name!
-            nextViewController.director = movies[currentIndex].director!
-            nextViewController.date = movies[currentIndex].releaseDate!
+            nextViewController.director = "Director: " + movies[currentIndex].director!
+            nextViewController.date = "Release date: " + movies[currentIndex].releaseDate!
+            nextViewController.characterApiLinks = movies[currentIndex].characters
         }
     }
 }
