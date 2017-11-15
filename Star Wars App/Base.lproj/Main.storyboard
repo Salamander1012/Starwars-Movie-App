@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdR-vh-G2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="110"/>
+            <point key="canvasLocation" x="-806" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -77,10 +77,39 @@
                     <navigationItem key="navigationItem" id="o1g-Sb-LYF"/>
                     <connections>
                         <outlet property="movieTableView" destination="fIu-MO-bDZ" id="sCq-qG-2vq"/>
+                        <segue destination="DVt-s7-Jjc" kind="show" identifier="movieSelectedSegue" id="tq6-LE-K0s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="76" y="33"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="uRs-u0-2aT">
+            <objects>
+                <viewController id="DVt-s7-Jjc" customClass="MovieViewController" customModule="Star_Wars_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g6X-nA-tiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHo-Cv-gl3">
+                                <rect key="frame" x="-11" y="284" width="397" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Ado-s7-A2s"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieTitleLabel" destination="eHo-Cv-gl3" id="hs8-kM-Nq9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9P2-QL-tbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>

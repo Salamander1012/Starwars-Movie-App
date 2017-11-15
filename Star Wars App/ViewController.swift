@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     var movieCount: Int?
     var movies: [Movie] = []
     var currentIndex = 0;
+    var jsonData: JSON?
+    var temp = ["das", "dsadasd", "dasdasdas"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,14 @@ class ViewController: UIViewController {
         movieTableView.dataSource = self
         navigationItem.title = "Starwars Movies"
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "movieSelectedSegue" {
+            let nextViewController = (segue.destination as! MovieViewController)
+            print(movies[currentIndex].name)
+            nextViewController.text  = movies[currentIndex].name!
+        }
     }
 }
 
@@ -45,49 +56,46 @@ extension ViewController {
             }
             
             if let data = data {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    //print(json as! NSDictionary)
-                    if let results = (json as! NSDictionary).value(forKey: "results") {
-                        self.results = results as! [NSDictionary]
-                    }
-                    if let count = (json as! NSDictionary).value(forKey: "count") {
-                        self.movieCount = count as! Int
-                    }
-                    self.setUpDataStructure()
-                    self.movieTableView.reloadData()
-                    print(self.movies)
-                } catch {
-                    print(error)
+                
+                let json = JSON(data: data)
+                
+                for movie in json["results"] {
+                    //print(movie.1["characters"])
+                    self.movies.append(Movie(name: movie.1["title"].string, characters: movie.1["characters"].arrayValue.map { $0.stringValue}))
                 }
                 
+                
+                
+            }
+            DispatchQueue.main.async{
+                self.movieTableView.reloadData()
             }
             
         }.resume()
     }
     
-    func  setUpDataStructure() {
-        for movie in results! {
-            var name = (movie as! NSDictionary).value(forKey: "title") as! String
-            var characters = (movie as! NSDictionary).value(forKey: "characters") as! [String]
-            movies.append(Movie(name: name, characters: characters))
-        }
-    }
+   
 }
 
 //Table View setup
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.movieCount ?? 0
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = movieTableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
         
-        cell.setUpCell(title: movies[indexPath.row].name ?? "title")
+        
+        cell.setUpCell(title: movies[indexPath.row].name!)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.currentIndex = indexPath.row
+        self.performSegue(withIdentifier: "movieSelectedSegue", sender: self)
     }
 }
 
